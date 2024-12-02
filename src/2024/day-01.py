@@ -1,32 +1,23 @@
-import collections
+from collections import Counter
+
 
 with open("day-01.txt", "r") as f:
     input_data = f.read().strip().split("\n")
 
 # Part 1
 
-list_one = []
-list_two = []
-for line in input_data:
-    list_one.append(int(line.split("   ")[0].strip()))
-    list_two.append(int(line.split("   ")[1].strip()))
+left = sorted(int(line.split("   ")[0].strip()) for line in input_data)
+right = sorted(int(line.split("   ")[1].strip()) for line in input_data)
 
-list_one = sorted(list_one)
-list_two = sorted(list_two)
-
-acc = 0
-for i in range(len(list_one)):
-    acc += abs(list_one[i] - list_two[i])
+acc = sum(abs(left[i] - right[i]) for i in range(len(left)))
 
 print(acc)
 
 # Part 2
 
-set_one = list(set(list_one))
-counter = collections.Counter(list_two)
+left_unique = list(set(left))
+freq = Counter(right)
 
-acc = 0
-for i in set_one:
-    acc += i * counter[i]
+acc = sum(n * freq[n] for n in left_unique)
 
 print(acc)
