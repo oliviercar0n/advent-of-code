@@ -27,7 +27,7 @@ for match in results:
         do = True
     elif match == "don't()":
         do = False
-    elif match.startswith("mul") and do == True:
+    elif match.startswith("mul") and do:
         l, r = match[4:-1].split(",")
         acc += int(l) * int(r)
 
