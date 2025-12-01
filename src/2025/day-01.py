@@ -1,5 +1,3 @@
-from math import floor
-
 with open("day-01.txt", "r") as f:
     input_data = f.read().strip().split("\n")
 
@@ -11,8 +9,7 @@ for ins in input_data:
     d = ins[0]
     i = int(ins[1:])
 
-    x = floor(i / 100)
-    i -= x * 100
+    i = i % 100
 
     if d == "L":
         pos -= i
