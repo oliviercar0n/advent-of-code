@@ -1,4 +1,3 @@
-from collections import Counter
 from math import floor
 
 with open("day-01.txt", "r") as f:
@@ -13,7 +12,6 @@ for ins in input_data:
     i = int(ins[1:])
 
     x = floor(i / 100)
-
     i -= x * 100
 
     if d == "L":
@@ -29,8 +27,8 @@ for ins in input_data:
     if pos == 0:
         acc += 1
 
-
 print(acc)
+
 
 # Part 2
 

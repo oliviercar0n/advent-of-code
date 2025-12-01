@@ -69,8 +69,8 @@ while True:
     cd = pd[pipe][cd]
 
 acc = 0
-for j in range(0, nm.shape[0] - 1):
-    for i in range(0, nm.shape[1] - 1):
+for j in range(0, nm.shape[0]):
+    for i in range(0, nm.shape[1]):
         it = 0
         if nm[j][i] not in ["X", "x"]:
             for x in range(i, nm.shape[1]):

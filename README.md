@@ -2,4 +2,4 @@
 
 2023: Python \
 2024: Python \
-2025: TBD
+2025: Python
