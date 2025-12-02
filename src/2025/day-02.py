@@ -21,11 +21,11 @@ for rng in input_data:
 
 print(acc)
 
+
 # Part 2
 
-
 acc = 0
-for i, rng in enumerate(input_data):
+for rng in input_data:
     lbound = int(rng.split("-")[0])
     ubound = int(rng.split("-")[1])
     for id in range(lbound, ubound + 1):
