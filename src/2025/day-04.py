@@ -52,7 +52,6 @@ while removed > 0:
                                     adj_rolls += 1
                 if adj_rolls < 4:
                     removed += 1
-                    next_m[y][x] = '.'
+                    next_m[y][x] = "."
     acc += removed
-
 print(acc)
