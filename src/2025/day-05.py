@@ -1,6 +1,6 @@
 from itertools import combinations
 
-with open("day-05.txt", "r") as f:
+with open("day-05-ex.txt", "r") as f:
     input_data = f.read().strip()
 
 ranges, ingredients = input_data.split("\n\n")
