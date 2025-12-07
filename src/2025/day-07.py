@@ -1,14 +1,8 @@
 import numpy as np
-from dataclasses import dataclass
-
-
-# @dataclass
-# class Beam:
 
 
 with open("day-07.txt", "r") as f:
     input_data = f.read().strip().split("\n")
-
 
 # Part 1
 
