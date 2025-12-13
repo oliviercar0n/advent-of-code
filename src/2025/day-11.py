@@ -1,7 +1,6 @@
 with open("day-11.txt", "r") as f:
     input_data = f.read().strip().split("\n")
 
-
 graph = {}
 for line in input_data:
     device, connections = line.split(":")
@@ -10,7 +9,6 @@ for line in input_data:
 
 
 def dfs(graph, current, target, memo) -> int:
-
     if current == target:
         return 1
 
@@ -34,7 +32,6 @@ print(ans)
 
 # Part 2
 
-memo = {}
 ans = (
     dfs(graph, "svr", "fft", {})
     * dfs(graph, "fft", "dac", {})
