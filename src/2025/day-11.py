@@ -10,6 +10,7 @@ for line in input_data:
 
 
 def dfs(graph, current, target, memo) -> int:
+
     if current == target:
         return 1
 
@@ -27,9 +28,7 @@ def dfs(graph, current, target, memo) -> int:
 
 # Part 1
 
-memo = {}
-ans = dfs(graph, "you", "out", memo)
-
+ans = dfs(graph, "you", "out", {})
 print(ans)
 
 
@@ -37,9 +36,8 @@ print(ans)
 
 memo = {}
 ans = (
-    dfs(graph, "svr", "fft", memo)
-    * dfs(graph, "fft", "dac", memo)
-    * dfs(graph, "dac", "out", memo)
+    dfs(graph, "svr", "fft", {})
+    * dfs(graph, "fft", "dac", {})
+    * dfs(graph, "dac", "out", {})
 )
-
 print(ans)
